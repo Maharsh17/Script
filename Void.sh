@@ -1,69 +1,72 @@
-echo "Updating Void"
-sudo xbps-install -Suvy
+#!/bin/bash
 
-echo "Installing Important Tools"
+# -- Updating -- #
+ sudo xbps-install -Suvy
+ sudo xbps-remove -Oo 
 
-# Audio
-sudo xbps-install pulseaudio ffmpeg libavcodec
+# -- Installing Important Tools -- #
 
-# Video
-sudo xbps-install xorg xf86-video-amdgpu mesa xf86-video-ati
+ # -- Audio -- #
+ sudo xbps-install pulseaudio ffmpeg libavcodec
 
-# Terminal
-sudo xbps-install alacritty kitty
+ # -- Video -- #
+ sudo xbps-install xorg xf86-video-amdgpu mesa xf86-video-ati
 
-# WM
-sudo xbps-install bspwm sxhkd polybar rofi picom
+ # -- Terminal -- #
+ sudo xbps-install alacritty kitty
 
-# Other
-sudo xbps-install xtools git wget curl tar unzip
+ # -- WM -- #
+ sudo xbps-install bspwm sxhkd polybar rofi picom
 
-# Fonts
+ # -- Other -- #
+ sudo xbps-install xtools git wget curl tar unzip
 
-VER="v2.1.0"
-mkdir User
-cd User
+ # -- Fonts -- #
 
-# -- Source Code Pro 
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/$VER/SourceCodePro.zip 
-unzip SourceCodePro.zip
-rm -rf SourceCodePro.zip
+ VER="v2.1.0"
+ mkdir User
+ cd User
 
-# -- Jet Brains Mono
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/$VER/JetBrainsMono.zip
-unzip JetBrainsMono.zip
-rm -rf JetBrainsMono.zip
+  # -- Source Code Pro -- # 
+  wget https://github.com/ryanoasis/nerd-fonts/releases/download/$VER/SourceCodePro.zip 
+  unzip SourceCodePro.zip
+  rm -rf SourceCodePro.zip
 
-# -- Hack
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/$VER/Hack.zip
-unzip Hack.zip
-rm -rf Hack.zip
+  # -- Jet Brains Mono -- #
+  wget https://github.com/ryanoasis/nerd-fonts/releases/download/$VER/JetBrainsMono.zip
+  unzip JetBrainsMono.zip
+  rm -rf JetBrainsMono.zip
 
-cd ..
-mv User /usr/share/fonts/
-fc-cache -f -v
+  # -- Hack -- #
+  wget https://github.com/ryanoasis/nerd-fonts/releases/download/$VER/Hack.zip
+  unzip Hack.zip
+  rm -rf Hack.zip
 
-# Configure WM
+ cd ..
+ mv User /usr/share/fonts/
+ fc-cache -f -v
 
-git clone https://github.com/Maharsh17/Dot.git
-cd Dot
-rm example.png screenshot.png Void.png README.md .xinitrc
-rm -rf polybar
-mv bspwm sxhkd Wall.jpg ~/.config/
-mv .bashrc ~/
-cd ..
-chmod +x ~/.config/bspwm/bpswmrc
+# -- Configure WM -- #
 
-git clone https://github.com/adi1090x/polybar-themes
-cd polybar-themes
-./setup.sh
-cd ..
+ # -- BSPWM -- #
+ git clone https://github.com/Maharsh17/Dot.git
+ cd Dot
+ rm example.png screenshot.png Void.png README.md .xinitrc
+ rm -rf polybar
+ mv bspwm sxhkd Wall.jpg ~/.config/
+ mv .bashrc ~/
+ cd ..
+ chmod +x ~/.config/bspwm/bpswmrc
 
-# Starship Prompt
+ # -- Polybar -- #
+ git clone https://github.com/adi1090x/polybar-themes
+ cd polybar-themes
+ ./setup.sh
+ cd ..
 
-sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+ # -- Starship Prompt -- #
+ sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
-# Update
-
-sudo xbps-install -Suv
-
+# -- Update -- #
+ sudo xbps-install -Suv
+ sudo xbps-remove -Oo
