@@ -51,10 +51,13 @@
  # -- BSPWM -- #
  git clone https://github.com/Maharsh17/Dot.git
  cd Dot
- rm example.png screenshot.png Void.png README.md .xinitrc
- rm -rf polybar
- mv bspwm sxhkd Wall.jpg ~/.config/
+ rm README.md .xinitrc
+ rm -rf polybar/ screenshot/
+ mv bspwm sxhkd ~/.config/
+ mkdir ~/Wall
+ mv wallpaper/Wall.png ~/Wall
  mv .bashrc ~/
+ rm -rf *
  cd ..
  chmod +x ~/.config/bspwm/bpswmrc
 
