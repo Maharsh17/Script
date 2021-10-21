@@ -56,7 +56,8 @@
  mv bspwm sxhkd ~/.config/
  chmod +x ~/.config/bspwm/bpswmrc
  mkdir ~/Wall
- mv wallpaper/Wall.jpg ~/Wall
+ mv wallpaper/Wall.jpg ~/Wall/
+ mv alacritty/ ~/.config/ 
  mv .bashrc ~/
  rm -rf *
  cd ..
