@@ -54,12 +54,12 @@
  rm README.md .xinitrc
  rm -rf polybar/ screenshot/
  mv bspwm sxhkd ~/.config/
+ chmod +x ~/.config/bspwm/bpswmrc
  mkdir ~/Wall
- mv wallpaper/Wall.png ~/Wall
+ mv wallpaper/Wall.jpg ~/Wall
  mv .bashrc ~/
  rm -rf *
  cd ..
- chmod +x ~/.config/bspwm/bpswmrc
 
  # -- Polybar -- #
  git clone https://github.com/adi1090x/polybar-themes
