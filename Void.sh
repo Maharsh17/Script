@@ -19,7 +19,7 @@
  sudo xbps-install bspwm sxhkd polybar rofi picom
 
  # -- Other -- #
- sudo xbps-install xtools git wget curl tar unzip
+ sudo xbps-install xtools nitrogen git wget curl tar unzip
 
  # -- Fonts -- #
 
