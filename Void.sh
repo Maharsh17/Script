@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # -- Updating -- #
+ sudo xbps-install -u xbps
  sudo xbps-install -Suvy
  sudo xbps-remove -Oo 
 
