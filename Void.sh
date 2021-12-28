@@ -39,29 +39,6 @@
 
 # -- Configure WM -- #
 
- # -- BSPWM -- #
- git clone https://github.com/Maharsh17/Dot.git
- cd Dot
- rm README.md
-
- mkdir ~/.config
- mv bspwm sxhkd polybar alacritty kitty ~/.config/
- chmod +x ~/.config/bspwm/bpswmrc
-
- mkdir ~/Wall
- mv wallpaper/* ~/Wall/
-
- rm ~/.gtkrc-2.0 
- mv .gtkrc-2.0 ~/
- 
- rm ~/.bashrc
- mv .bashrc ~/
-
- mv .xinitrc ~/
- rm -rf *
- cd ..
- rm -rf Dot/
-
  # -- GTK -- #
  git clone https://github.com/dracula/gtk Dracula
  mkdir ~/.themes
@@ -73,16 +50,38 @@
  ./install.sh
  rm -rf install.sh
  
-# -- Polybar -- #
-git clone https://github.com/adi1090x/polybar-themes
-cd polybar-themes
-./setup.sh
-
-# -- Starship Prompt -- #
+ # -- Starship Prompt -- #
  wget https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-musl.tar.gz
  tar -xf starship-x86_64-unknown-linux-musl.tar.gz
  sudo mv starship /bin/
  rm -rf starship-x86_64-unknown-linux-musl.tar.gz
+
+ # -- BSPWM -- #
+ git clone https://github.com/Maharsh17/Dot.git
+ cd Dot
+ rm README.md
+
+ mkdir ~/.config
+ mv bspwm polybar sxhkd alacritty kitty ~/.config/
+ 
+ mv fonts/ Bar/
+ sudo mv Bar/  /usr/share/fonts 
+ fc-cache -f -v
+
+ mkdir ~/Wall
+ mv wallpaper/* ~/Wall/
+
+ rm ~/.gtkrc-2.0
+ mv .gtkrc-2.0 ~/
+
+ rm ~/.bashrc
+ mv .bashrc ~/
+
+ mv .xinitrc ~/
+ rm -rf *
+ cd ..
+ rm -rf Dot/
+
 
 # -- Update -- #
  sudo xbps-install -Suvy
