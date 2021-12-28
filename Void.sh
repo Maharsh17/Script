@@ -73,7 +73,12 @@
  ./install.sh
  rm -rf install.sh
  
- # -- Starship Prompt -- #
+# -- Polybar -- #
+git clone https://github.com/adi1090x/polybar-themes
+cd polybar-themes
+./setup.sh
+
+# -- Starship Prompt -- #
  wget https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-musl.tar.gz
  tar -xf starship-x86_64-unknown-linux-musl.tar.gz
  sudo mv starship /bin/
