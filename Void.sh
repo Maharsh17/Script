@@ -65,15 +65,6 @@
  cd ..
  rm -rf Dot/
 
- # -- Starship Prompt -- #
- sh -c "$(curl -fsSL https://starship.rs/install.sh)"
-
- # -- ZSH -- #
- sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 
-
- # -- SHELL -- #
- chsh -s /usr/bin/zsh
-
  # -- GTK -- #
  git clone https://github.com/dracula/gtk Dracula
  mkdir ~/.themes
@@ -85,6 +76,15 @@
  ./install.sh
  rm -rf install.sh
  
+ # -- Starship Prompt -- #
+ sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+
+ # -- ZSH -- #
+ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 
+
+ # -- SHELL -- #
+ chsh -s /usr/bin/zsh
+
 # -- Update -- #
  sudo xbps-install -Suvy
  sudo xbps-remove -Ooy
