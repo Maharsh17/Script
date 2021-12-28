@@ -51,6 +51,9 @@
  mkdir ~/Wall
  mv wallpaper/* ~/Wall/
 
+ mkdir -p ~/.config/gtk-3.0
+ mv settings.ini ~/.config/gtk-3.0
+
  rm ~/.gtkrc-2.0
  mv .gtkrc-2.0 ~/
 
