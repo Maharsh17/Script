@@ -74,7 +74,10 @@
  rm -rf install.sh
  
  # -- Starship Prompt -- #
- sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+ wget https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-musl.tar.gz
+ tar -xf starship-x86_64-unknown-linux-musl.tar.gz
+ sudo mv starship /bin/
+ rm -rf starship-x86_64-unknown-linux-musl.tar.gz
 
 # -- Update -- #
  sudo xbps-install -Suvy
