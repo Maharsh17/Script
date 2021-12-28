@@ -36,7 +36,7 @@
  rm -rf starship-x86_64-unknown-linux-musl.tar.gz
 
  # -- BSPWM -- #
- git clone https://github.com/Maharsh17/Dot.git
+ git clone https://github.com/janimaharsh/Dot.git
  cd Dot
  rm README.md
 
