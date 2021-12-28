@@ -14,7 +14,7 @@
  sudo xbps-install xorg xf86-video-amdgpu mesa xf86-video-ati -y
 
  # -- Terminal -- #
- sudo xbps-install alacritty kitty zsh -y
+ sudo xbps-install alacritty kitty -y
 
  # -- WM -- #
  sudo xbps-install bspwm sxhkd polybar rofi picom -y
@@ -56,10 +56,7 @@
  
  rm ~/.bashrc
  mv .bashrc ~/
- 
- rm ~/.zshrc
- mv .zshrc ~/
- 
+
  mv .xinitrc ~/
  rm -rf *
  cd ..
@@ -78,12 +75,6 @@
  
  # -- Starship Prompt -- #
  sh -c "$(curl -fsSL https://starship.rs/install.sh)"
-
- # -- ZSH -- #
- sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 
-
- # -- SHELL -- #
- chsh -s /usr/bin/zsh
 
 # -- Update -- #
  sudo xbps-install -Suvy
