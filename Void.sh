@@ -11,7 +11,7 @@
  sudo xbps-install pulseaudio ffmpeg libavcodec -y
 
  # -- Video -- #
- sudo xbps-install xorg xf86-video-amdgpu mesa xf86-video-ati -y
+ sudo xbps-install xorg xf86-video-amdgpu mesa xf86-video-ati psmisc -y
 
  # -- Terminal -- #
  sudo xbps-install alacritty kitty -y
