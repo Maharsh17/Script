@@ -44,6 +44,7 @@
  cd Dot
  rm README.md
 
+ mkdir ~/.config
  mv bspwm sxhkd polybar alacritty kitty ~/.config/
  chmod +x ~/.config/bspwm/bpswmrc
 
