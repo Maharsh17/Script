@@ -49,7 +49,7 @@
  chmod +x ~/.config/bspwm/bpswmrc
 
  mkdir ~/Wall
- mv wallpaper/ ~/Wall/
+ mv wallpaper/* ~/Wall/
 
  rm ~/.gtkrc-2.0 
  mv .gtkrc-2.0 ~/
