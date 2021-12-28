@@ -28,13 +28,7 @@
  git clone https://github.com/dracula/gtk Dracula
  mkdir ~/.themes
  mv Dracula ~/.themes
- 
- # -- Icon -- #
- wget https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/master/install.sh
- chmod +x install.sh
- ./install.sh
- rm -rf install.sh
- 
+
  # -- Starship Prompt -- #
  wget https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-musl.tar.gz
  tar -xf starship-x86_64-unknown-linux-musl.tar.gz
@@ -46,11 +40,13 @@
  cd Dot
  rm README.md
 
- mkdir ~/.config
+ mkdir -p  ~/.config
  mv bspwm polybar sxhkd alacritty kitty ~/.config/
- 
- mv fonts/ Bar/
- sudo mv Bar/  /usr/share/fonts
+
+ ./install.sh
+
+ sudo mv fonts/* /usr/share/fonts
+ fc-cache -f -v
 
  mkdir ~/Wall
  mv wallpaper/* ~/Wall/
@@ -63,23 +59,9 @@
 
  mv .xinitrc ~/
  rm -rf *
+
  cd ..
  rm -rf Dot/
-
-# -- Fonts -- #
-
- # -- Jet Brains Mono -- #
- wget https://download.jetbrains.com/fonts/JetBrainsMono-2.242.zip
- unzip JetBrainsMono-*.zip
- rm -rf *.zip
- rm -rf AUTHORS.txt OFL.txt fonts/variable/ fonts/webfonts/
- cd fonts/
- mv ttf/ Jet/
- sudo mv Jet/ /usr/share/fonts
- cd ..
- rm -rf fonts/
- fc-cache -f -v
-
 
 # -- Update -- #
  sudo xbps-install -Suvy
