@@ -20,22 +20,7 @@
  sudo xbps-install bspwm sxhkd polybar rofi picom -y
 
  # -- Other -- #
- sudo xbps-install xtools nitrogen git wget curl tar unzip lxappearance font-iosevka binutils xz -y
-
-# -- Fonts -- #
-  
- # -- Jet Brains Mono -- #
- wget https://download.jetbrains.com/fonts/JetBrainsMono-2.242.zip
- unzip JetBrainsMono-*.zip
- rm -rf *.zip 
- rm -rf AUTHORS.txt OFL.txt fonts/variable/ fonts/webfonts/
- cd fonts/
- mkdir -p ~/.local/share/fonts
- mv ttf/ Jet/ 
- mv Jet/ ~/.local/share/fonts
- cd .. 
- rm -rf fonts/
- fc-cache -f -v
+ sudo xbps-install xtools nitrogen git wget curl tar unzip lxappearance binutils xz -y
 
 # -- Configure WM -- #
 
@@ -65,8 +50,7 @@
  mv bspwm polybar sxhkd alacritty kitty ~/.config/
  
  mv fonts/ Bar/
- sudo mv Bar/  /usr/share/fonts 
- fc-cache -f -v
+ sudo mv Bar/  /usr/share/fonts
 
  mkdir ~/Wall
  mv wallpaper/* ~/Wall/
@@ -81,6 +65,20 @@
  rm -rf *
  cd ..
  rm -rf Dot/
+
+# -- Fonts -- #
+
+ # -- Jet Brains Mono -- #
+ wget https://download.jetbrains.com/fonts/JetBrainsMono-2.242.zip
+ unzip JetBrainsMono-*.zip
+ rm -rf *.zip
+ rm -rf AUTHORS.txt OFL.txt fonts/variable/ fonts/webfonts/
+ cd fonts/
+ mv ttf/ Jet/
+ sudo mv Jet/ /usr/share/fonts
+ cd ..
+ rm -rf fonts/
+ fc-cache -f -v
 
 
 # -- Update -- #
