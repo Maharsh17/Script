@@ -23,10 +23,8 @@
  sudo pacman -S nitrogen git wget curl tar unzip lxappearance binutils xz base-devel --noconfirm
 
  # -- Polybar -- #
- git clone https://gitea.artixlinux.org/Universe/polybar
- cd polybar 
- makepkg -si --noconfirm
- cd ..
+ wget https://repo.herecura.be/herecura/x86_64/polybar-3.5.7-1-x86_64.pkg.tar.zst
+ sudo pacman -U polybar-* --noconfirm
  
 # -- Configure WM -- #
 
