@@ -11,7 +11,7 @@
  sudo pacman -S pulseaudio ffmpeg pulseaudio-alsa --noconfirm
 
  # -- Video -- #
- sudo pacman -S xorg xf86-video-amdgpu mesa xf86-video-ati psmisc --noconfirm
+ sudo pacman -S xorg xorg-init xf86-video-amdgpu mesa xf86-video-ati psmisc --noconfirm
 
  # -- Terminal -- #
  sudo pacman -S alacritty kitty --noconfirm
