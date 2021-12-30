@@ -8,4 +8,5 @@ Scripts to install my desktop on :-
 
 
 BSPWM - Dracula
+
 i3    - Nord
