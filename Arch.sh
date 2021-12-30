@@ -22,23 +22,26 @@
  # -- Other -- #
  sudo pacman -S nitrogen git wget curl tar unzip lxappearance binutils xz base-devel --noconfirm
 
-  # -- Chaotic AUR -- #
- sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
- sudo pacman-key --lsign-key FBA220DFC880C036
- sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
- sudo echo "[chaotic-aur]" >> /etc/pacman.conf
- sudo echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
+ # -- Chaotic AUR -- #
+ # sudo pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
+ # sudo pacman-key --lsign-key FBA220DFC880C036
+ # sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+ # sudo echo "[chaotic-aur]" >> /etc/pacman.conf
+ # sudo echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
  
  # -- Polybar -- #
  # wget https://repo.herecura.be/herecura/x86_64/polybar-3.5.7-1-x86_64.pkg.tar.zst
  # sudo pacman -U polybar-* --noconfirm
+ wget https://raw.githubusercontent.com/peux-os-sic/Peux-Leftwm/master/polybar-3.5.5-2-x86_64.pkg.tar.zst
+ sudo pacman -U polybar-3.5.5-2-x86_64.pkg.tar.zst
+ sudo pacman -S acpi feh 
  
  # git clone https://aur.archlinux.org/polybar
  # cd polybar
  # makepkg -si --noconfirm
  # cd ..
- sudo pacman -Syu
- sudo pacman -S polybar
+ # sudo pacman -Syu
+ # sudo pacman -S polybar
 
  
 # -- Configure WM -- #
