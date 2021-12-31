@@ -43,13 +43,13 @@
 
  # -- BSPWM -- #
  git clone https://github.com/Maharsh17/Dot.git
- cd Dot
+ cd Dot/BSPWM/
  rm README.md
 
  mkdir -p  ~/.config
  mv bspwm polybar sxhkd alacritty kitty ~/.config/
 
- ./install.sh
+ sudo mv icons/* /usr/share/icons
 
  sudo mv fonts/* /usr/share/fonts
  fc-cache -f -v
