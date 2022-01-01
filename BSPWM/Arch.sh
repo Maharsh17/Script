@@ -43,7 +43,7 @@
 
  # -- BSPWM -- #
  git clone https://github.com/Maharsh17/Dot.git
- cd Dot/BSPWM/
+ cd Dot/BSPWM/Dracula
  rm README.md
 
  mkdir -p  ~/.config
