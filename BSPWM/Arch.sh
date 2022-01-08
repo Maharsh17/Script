@@ -1,5 +1,6 @@
 #!/bin/bash
 
 ./Core/Update.sh
-./Core/Pac.sh
+./Core/Pacman.sh
+./Core/Common.sh
 ./Core/Update.sh
