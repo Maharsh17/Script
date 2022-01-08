@@ -26,8 +26,7 @@
 
  # -- GTK -- #
  git clone https://github.com/dracula/gtk Dracula
- mkdir ~/.themes
- mv Dracula ~/.themes
+ mv Dracula/ /usr/share/themes/
 
  # -- Starship Prompt -- #
  wget https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-musl.tar.gz
@@ -37,21 +36,21 @@
 
  # -- BSPWM -- #
  git clone https://github.com/Maharsh17/Dot.git
- cd Dot/BSPWM/Dracula
+ cd Dot/BSPWM/
  rm README.md
 
  mkdir -p  ~/.config
- mv bspwm polybar sxhkd alacritty kitty ~/.config/
+ mv bspwm/ polybar/ sxhkd/ alacritty/ kitty/ ~/.config/
 
- sudo mv icons/* /usr/share/icons
+ sudo mv icons/* /usr/share/icons/
 
- sudo mv fonts/* /usr/share/fonts
+ sudo mv fonts/* /usr/share/fonts/
  fc-cache -f -v
 
- mkdir ~/Wall
+ mkdir ~/Wall/
  mv wallpaper/* ~/Wall/
 
- mkdir -p ~/.config/gtk-3.0
+ mkdir -p ~/.config/gtk-3.0/
  mv settings.ini ~/.config/gtk-3.0
 
  rm ~/.gtkrc-2.0
