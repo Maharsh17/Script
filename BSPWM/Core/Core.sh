@@ -11,32 +11,43 @@
  rm -rf starship-x86_64-unknown-linux-musl.tar.gz
 
  # -- BSPWM Config -- #
- git clone https://github.com/Maharsh17/Dot.git
- cd Dot/BSPWM/
- rm README.md
+  
+ # -- Clone Repo -- #
+  git clone https://github.com/Maharsh17/Dot.git
+  cd Dot/BSPWM/
+  rm README.md
 
- mkdir -p  ~/.config/
- mv bspwm/ picom/ polybar/ sxhkd/ alacritty/ kitty/ ~/.config/
+ # -- Configs -- #
+  mkdir -p  ~/.config/
+  mv bspwm/ picom/ polybar/ sxhkd/ alacritty/ kitty/ ~/.config/
 
- sudo mv icons/* /usr/share/icons/
+ # -- Icons -- #
+  sudo mv icons/* /usr/share/icons/
 
- sudo mv fonts/* /usr/share/fonts/
- fc-cache -f -v
+ # -- Fonts -- #
+  sudo mv fonts/* /usr/share/fonts/
+  fc-cache -f -v
 
- mkdir ~/Wall/
- mv wallpaper/* ~/Wall/
+ # -- Wallpaper -- #
+  mkdir ~/Wall/
+  mv wallpaper/* ~/Wall/
 
- mkdir -p ~/.config/gtk-3.0/
- mv settings.ini ~/.config/gtk-3.0
+ # -- GTK 3 Config -- #
+  mkdir -p ~/.config/gtk-3.0/
+  mv settings.ini ~/.config/gtk-3.0
 
- rm ~/.gtkrc-2.0
- mv .gtkrc-2.0 ~/
+ # -- GTK 2 Config -- #
+  rm ~/.gtkrc-2.0
+  mv .gtkrc-2.0 ~/
 
- rm ~/.bashrc
- mv .bashrc ~/
+ # -- Bash Config -- #
+  rm ~/.bashrc
+  mv .bashrc ~/
 
- mv .xinitrc ~/
- rm -rf *
+ # -- XINITRC -- #
+  mv .xinitrc ~/
+  rm -rf *
 
- cd .. ; cd ..
- rm -rf Dot/
+ # -- Remove Directory -- #
+  cd .. ; cd ..
+  rm -rf Dot/
