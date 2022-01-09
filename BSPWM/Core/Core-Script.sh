@@ -19,7 +19,7 @@
 
  # -- Configs -- #
   mkdir -p  ~/.config/
-  mv bspwm/ picom/ polybar/ sxhkd/ alacritty/ kitty/ ~/.config/
+  mv bspwm/ dunst/ picom/ polybar/ sxhkd/ alacritty/ kitty/ ~/.config/
 
  # -- Icons -- #
   sudo mv icons/* /usr/share/icons/
