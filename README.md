@@ -2,11 +2,11 @@
 
 Scripts to install my desktop on :-
 
-- Void Linux
-- Arch Linux
-- Artix Linux
+- Void Linux Based Distro
+- Arch Linux Based Distro
 
 
-BSPWM - Dracula
+Window Managers :-
 
-i3    - Nord
+ BSPWM - Dracula
+ i3    - Nord
