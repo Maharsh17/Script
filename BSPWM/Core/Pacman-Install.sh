@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # -- Installing Important Tools -- #
 
  # -- Audio -- #
