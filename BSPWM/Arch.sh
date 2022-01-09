@@ -2,5 +2,5 @@
 
 ./Core/Pacman-Update.sh
 ./Core/Pacman-Install.sh
-./Core/Core.sh
+./Core/Core-Script.sh
 ./Core/Pacman-Update.sh
