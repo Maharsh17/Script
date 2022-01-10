@@ -12,7 +12,7 @@
  sudo pacman -S alacritty kitty --noconfirm
  
  # -- Other -- #
- sudo pacman -S nitrogen git acpi feh wget curl tar unzip lxappearance binutils xz sxhkd rofi base-devel --noconfirm
+ sudo pacman -S nitrogen git acpi feh wget curl tar unzip lxappearance binutils xz sxhkd rofi base-devel dunst --noconfirm
 
  # -- Polybar -- #
  wget https://raw.githubusercontent.com/Maharsh17/Repo/main/Arch/polybar-3.5.5-2-x86_64.pkg.tar.zst
