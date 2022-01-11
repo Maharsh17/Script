@@ -15,5 +15,5 @@
  sudo xbps-install bspwm sxhkd polybar rofi picom -y
 
  # -- Other -- #
- sudo xbps-install xtools nitrogen git wget curl tar unzip lxappearance binutils xz dunst -y
+ sudo xbps-install xtools nitrogen git wget curl tar unzip lxappearance binutils xz dunst scrot -y
 
